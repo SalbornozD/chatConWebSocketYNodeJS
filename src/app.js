@@ -7,7 +7,9 @@ import path from 'path'
 
 //Configuracion del servidor.
 const app = express();
-const httpServer = app.listen(8080, () => {
+const PORT = process.env.PORT || 3000;
+
+const httpServer = app.listen(PORT, '0.0.0.0', () => {
     console.log("Servidor escuchando en el puerto 8080");
 })
 
